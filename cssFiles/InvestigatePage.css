@@ -1,0 +1,114 @@
+﻿
+#slideshow
+{
+    margin: 0px auto;
+    padding: 5px 5px;
+    width: 800px;
+    height: 400px;
+    text-align: left;
+    float: left;
+}
+
+#slideshow #slidesContainer
+{
+    float: left;
+    margin: 0px auto;
+    width: 800px;
+    background: #f4f4f4;
+    height: 400px;
+    overflow: auto;
+    padding: 0;
+}
+
+#slideshow #slidesContainer .slide
+{
+    float: left;
+    margin: 0px auto;
+    width: 800px;
+    height: 400px;
+    padding: 0;
+}
+.control
+{
+    display: block;
+    width: 5px;
+    height: 400px;
+    position: absolute;
+    cursor: pointer;
+}
+#leftControl
+{
+    top: 0;
+    left: 0;
+}
+#rightControl
+{
+    top: 0;
+    right: 0;
+}
+/** 
+ * Style rules for Demo page
+ */*
+{
+    margin: 0;
+    padding: 0;
+    font: normal 11px Verdana, Geneva, sans-serif;
+}
+a
+{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+#pageContainer
+{
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: White;
+}
+#pageContainer h1
+{
+    display: block;
+    width: 800px;
+    height: 114px;
+    text-indent: -10000px;
+}
+.slide
+{
+    background-image: url(../images/insBG.jpg);
+}
+.slide h2, .slide p
+{
+    margin: 15px;
+}
+.slide h2
+{
+    font: italic 24px Georgia, "Times New Roman" , Times, serif;
+    color: black;
+    letter-spacing: -1px;
+}
+.slide img
+{
+    float: right;
+    margin: 0 15px;
+}
+#head, #foot
+{
+    height: 30px;
+    width: 100%;
+}
+.dateText
+{
+    width: 50px;
+}
+.gridview1 td, th
+{
+    text-align: center;
+}

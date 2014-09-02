@@ -1,0 +1,92 @@
+A {
+	COLOR: #333333;
+	font-family: "宋体";
+	font-size: 9pt;
+	text-decoration: none;
+} 
+.top {
+    FILTER: dropshadow(color=#ffffff,offx=1,offy=1,positive=1);
+	COLOR: #007564;
+	font-size: 10.5pt
+	}
+.fontglow {
+	font-size:12px;
+	font-weight:bold;
+	filter:glow(color=#ffffff,strength=1);
+}
+.fontglow1 {
+	font-size:12px;
+	filter:glow(color=#ffffff,strength=1);
+}
+.tableBorder {
+	BORDER-RIGHT: #183789 1px solid; BORDER-TOP: #183789 1px solid; BORDER-LEFT: #183789 1px solid; WIDTH: 98%; BORDER-BOTTOM: #183789 1px solid; BACKGROUND-COLOR: #ffffff
+}
+
+a.link_redblank:link            {  padding:2 2 2 2; color: #4D4D4D; text-decoration: none}
+a.link_redblank:visited        {  padding:2 2 2 2; color: #4D4D4D; text-decoration: none}
+a.link_redblank:hover         { color : #ffffff;background: #ff0000; text-decoration:none; padding:2 2 2 2; }
+
+a.link_redblank1:link            {  padding:2 2 2 2; color: #4D4D4D; text-decoration: none}
+a.link_redblank1:visited        {  padding:2 2 2 2; color: #4D4D4D; text-decoration: none}
+a.link_redblank1:hover         { color : #ffffff;background: #f1f1f1; text-decoration:none; padding:2 2 2 2; }
+
+A:hover {
+	COLOR: #FF6600;
+	text-decoration: underline;
+}
+DIV,FORM,P,TD,BODY{FONT-SIZE:9pt;}
+BODY{
+SCROLLBAR-HIGHLIGHT-COLOR:buttonface;
+SCROLLBAR-SHADOW-COLOR:buttonface;
+SCROLLBAR-3DLIGHT-COLOR:buttonhighlight;
+SCROLLBAR-TRACK-COLOR:eeeeee;
+SCROLLBAR-DARKSHADOW-COLOR:buttonshadow
+}
+.T01
+{
+    BORDER:1px #CBCBCB solid;
+}
+
+TD {FONT-SIZE: 9pt;COLOR: #666666;LINE-HEIGHT: 160%;FONT-FAMILY: "宋体";font-style: normal;font-weight: normal;font-variant: normal;}
+.wenbenkuang {color: #333333;border: 1px solid #999999;font-family: "宋体";font-size: 9pt;}
+.go-wenbenkuang {font-family: "宋体";font-size: 9pt;color: #333333;background-color: #eeeeee;cursor: hand;padding: 1px;height: 19px;border-top: 1px solid #FFFFFF;border-right: 1px solid #a2a2a2;border-bottom: 1px solid #a2a2a2;border-left: 1px solid #FFFFFF;}
+
+
+
+.no1 {
+	color:#E72718;
+}
+.no2 {
+	color:#FF672E;
+}
+.no3 {
+	color:#FF7129;
+}
+.no4 {
+	color:#FF7029;
+}
+.no5 {
+	color:#D09F28;
+}
+.no6 {
+	color:#AAD708;
+}
+.no7 {
+	color:#A8C628;
+}
+.no8 {
+	color:#67C70E;
+}
+.no9 {
+	color:#609739;
+}
+.no10 {
+	color:#489E5F;
+}
+.no11 {
+	color:#0071BC;
+}
+.tmpstr{word-break:break-all}
+.clssMainRoll {
+	FILTER: progid:DXImageTransform.Microsoft.Slide(slidestyle=SWAP,Bands=1); CURSOR: pointer
+}

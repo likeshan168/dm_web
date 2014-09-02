@@ -1,0 +1,150 @@
+#ibm-content-head H1.dwtop {
+	COLOR: #e15119
+}
+.dwwordmark#ibm-content-head {
+	BACKGROUND: url(developerworks/i/dwwordmark.gif) no-repeat 560px 0px
+}
+.ibm-content-subtitle#ibm-content-head P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 8px; PADDING-TOP: 0px
+}
+#dw-date-area {
+	FONT-SIZE: 0.9em; FLOAT: right; FONT-STYLE: normal; FONT-FAMILY: arial,sans-serif
+}
+.dw-feature-image {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+H3.dw-feature-heading {
+	FONT-WEIGHT: bold; FONT-SIZE: 0.8em; FONT-STYLE: normal; FONT-FAMILY: verdana,sans-serif
+}
+H3.dw-feature-heading A:visited {
+	COLOR: #4c6e94
+}
+.dw-tab-simple-show-hide {
+	PADDING-BOTTOM: 4px; PADDING-TOP: 4px
+}
+.dw-show-hide-spacer {
+	PADDING-BOTTOM: 4px
+}
+#ibm-content-main .ibm-three-column .dw-tab-third-column {
+	WIDTH: 160px! important
+}
+.ibm-portrait-module IMG.dw-image-space {
+	PADDING-RIGHT: 0px! important; PADDING-LEFT: 0px! important; PADDING-BOTTOM: 4px! important; PADDING-TOP: 0px! important
+}
+UL.ibm-portrait-module-list LI IMG.dw-image-space {
+	PADDING-RIGHT: 0px! important; PADDING-LEFT: 0px! important; PADDING-BOTTOM: 4px! important; PADDING-TOP: 0px! important
+}
+#dw-signin {
+	OVERFLOW: auto; HEIGHT: auto
+}
+* HTML #dw-signin {
+	WIDTH: 168px; HEIGHT: auto
+}
+#dw-signin UL.dw-signin-links {
+	WIDTH: 167px
+}
+#ibm-content-sidebar .dw-right-bullet-list.ibm-container-body {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 4px
+}
+#ibm-content-sidebar .ibm-container-body SPAN.dw-important {
+	COLOR: #f60
+}
+#ibm-content-sidebar .ibm-container-body P.dw-special-offers {
+	PADDING-BOTTOM: 0px
+}
+#ibm-navigation LI A.dw-separator {
+	BORDER-BOTTOM: #98b1c4 5px solid
+}
+#dw-footer-module {
+	CLEAR: both; WIDTH: 930px; HEIGHT: 120px; BACKGROUND-COLOR: #eee
+}
+#dw-footer-module .footer-module-container {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 20px; PADDING-TOP: 14px
+}
+#dw-footer-module .footer-module-container .footer-module-column-first {
+	FLOAT: left; WIDTH: 350px
+}
+#dw-footer-module .footer-module-container .footer-module-column-second {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 1px; PADDING-TOP: 0px
+}
+#dw-footer-module .footer-module-container .footer-module-column-third {
+	PADDING-LEFT: 10px; FLOAT: left; WIDTH: 530px
+}
+#dw-footer-module .footer-module-container .footer-module-column-third H2 {
+	PADDING-RIGHT: 0px! important; PADDING-LEFT: 3px! important; FONT-WEIGHT: bold; FONT-SIZE: 0.7em; PADDING-BOTTOM: 8px! important; MARGIN: 0px; COLOR: #666; PADDING-TOP: 0px! important; FONT-FAMILY: verdana,arial,sans-serif
+}
+#dw-footer-module .bottom {
+	CLEAR: both; HEIGHT: 20px
+}
+#dw-footer-module .bottom A.ibm-forward-link:link {
+	TEXT-DECORATION: none
+}
+#dw-footer-module .bottom A.ibm-forward-link:visited {
+	TEXT-DECORATION: none
+}
+#dw-footer-module .bottom A.ibm-forward-link:hover {
+	TEXT-DECORATION: underline
+}
+#dw-footer-module .bottom A.ibm-forward-link {
+	PADDING-RIGHT: 40px; PADDING-LEFT: 20px; FONT-SIZE: 0.7em; BACKGROUND: url(i/v16/icons/fw.gif) no-repeat 0px 0px; FLOAT: right; FONT-FAMILY: arial,sans-serif
+}
+#dw-footer-module IMG.footer-module-image {
+	PADDING-LEFT: 5px
+}
+.dwfwte {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(developerworks/i/icon_gadget.gif) no-repeat; LEFT: 140px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 16px; CURSOR: pointer; PADDING-TOP: 0px; POSITION: relative; TOP: 3px; HEIGHT: 16px
+}
+.dwfwtc {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(developerworks/i/icon_gadgetroll.gif) no-repeat; LEFT: 140px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 16px; CURSOR: pointer; PADDING-TOP: 0px; POSITION: relative; TOP: 3px; HEIGHT: 16px
+}
+.dwfwte-alt {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(developerworks/i/icon_gadget.gif) no-repeat; LEFT: 140px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 16px; CURSOR: pointer; BOTTOM: 3px; PADDING-TOP: 0px; POSITION: relative; HEIGHT: 16px
+}
+.dwfwtc-alt {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(developerworks/i/icon_gadgetroll.gif) no-repeat; LEFT: 140px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 16px; CURSOR: pointer; BOTTOM: 3px; PADDING-TOP: 0px; POSITION: relative; HEIGHT: 16px
+}
+.dwgooglegadget {
+	PADDING-RIGHT: 5px; BACKGROUND: url(//buttons.googlesyndication.com/fusion/add.gif) no-repeat; WIDTH: 104px; CURSOR: pointer; HEIGHT: 17px
+}
+.dwnetvibes {
+	PADDING-RIGHT: 5px; BACKGROUND: url(//eco.netvibes.com/img/add2netvibes.png) no-repeat; WIDTH: 91px; CURSOR: pointer; HEIGHT: 17px
+}
+.dwmyyahoo {
+	PADDING-RIGHT: 5px; BACKGROUND: url(developerworks/i/addtomyyahoo4.gif) no-repeat; WIDTH: 91px; CURSOR: pointer; HEIGHT: 17px
+}
+.dwrss {
+	PADDING-RIGHT: 5px; BACKGROUND: url(developerworks/i/subscribeto.gif) no-repeat; WIDTH: 91px; CURSOR: pointer; HEIGHT: 17px
+}
+.dw-interest-block-tech {
+	MARGIN: 0.3em 0em 1em; WIDTH: 100%
+}
+.dw-interest-block {
+	MARGIN: -0.5em 0em 1em; WIDTH: 100%
+}
+#interestShow DIV#dw-interest-anon {
+	FONT-SIZE: 0.7em; BACKGROUND: url(developerworks/i/updateinterests.gif) no-repeat 0px 2px; FONT-FAMILY: arial,sans-serif
+}
+#interestShow DIV#dw-interest-anon A.ibm-external-link {
+	PADDING-LEFT: 20px; FONT-WEIGHT: bold! important; BACKGROUND: url(developerworks/i/updateinterests.gif) no-repeat 0px 0px; COLOR: #4c6e94; LINE-HEIGHT: 150%
+}
+#interestShow DIV#dw-interest-add {
+	FONT-SIZE: 0.7em; BACKGROUND: url(developerworks/i/addinterests.gif) no-repeat 0px 2px; FONT-FAMILY: arial,sans-serif
+}
+#interestShow DIV#dw-interest-add A.ibm-external-link {
+	PADDING-LEFT: 20px; FONT-WEIGHT: bold! important; BACKGROUND: url(developerworks/i/addinterests.gif) no-repeat 0px 0px; COLOR: #4c6e94; LINE-HEIGHT: 150%
+}
+#interestShow DIV#dw-interest-remove {
+	FONT-SIZE: 0.7em; BACKGROUND: url(developerworks/i/removeinterests.gif) no-repeat 0px 2px; FONT-FAMILY: arial,sans-serif
+}
+#interestShow DIV#dw-interest-remove A.ibm-external-link {
+	PADDING-LEFT: 20px; FONT-WEIGHT: bold! important; BACKGROUND: url(developerworks/i/removeinterests.gif) no-repeat 0px 0px; COLOR: #4c6e94; LINE-HEIGHT: 150%
+}
+#interestShow A.dw-interest:link {
+	TEXT-DECORATION: none
+}
+#interestShow A.dw-interest:visited {
+	COLOR: #4c6e94; TEXT-DECORATION: none
+}
+#interestShow A.dw-interest:hover {
+	TEXT-DECORATION: underline
+}

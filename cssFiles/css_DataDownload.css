@@ -1,0 +1,40 @@
+﻿#out_vip, #out_saler, #out_shop,#out_vipCard,#out_vipKdt,#out_vipKdtSale
+{
+    width: 200px;
+    height: 15px;
+    background: white;
+    position: relative;
+    border: 2px none Gray;
+    top: 0px;
+    left: 0px;
+}
+#in_vip, #in_saler, #in_shop,#in_vipCard,#in_vipKdt,#in_vipKdtSale
+{
+    width: 1px;
+    height: 15px;
+    background: gray;
+    text-align: center;
+    overflow: hidden;
+    color: White;
+}
+#in_0_vip, #in_0_saler, #in_0_shop,#in_0_vipCard,#in_0_vipKdt,#in_0_vipKdtSale
+{
+    text-align: center;
+    width: 200px;
+    font-weight: bold;
+    height: 15px;
+    line-height: 15px;
+    position: absolute;
+    z-index: -1;
+    font-size: small;
+}
+#in_1_shop, #in_1_vip, #in_1_saler,#in_1_vipCard,#in_1_vipKdt,,#in_1_vipKdtSale
+{
+    text-align: center;
+    width: 200px;
+    font-weight: bold;
+    height: 15px;
+    line-height: 15px;
+    color: white;
+    font-size: small;
+}

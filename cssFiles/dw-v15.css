@@ -1,0 +1,15 @@
+#v14-body-table {
+	MARGIN-LEFT: 0px; MARGIN-RIGHT: 0px
+}
+DIV.ibm-liquid #v14-body-table {
+	PADDING-LEFT: 0px! important
+}
+*:first-child + HTML #ibm-top #ibm-masthead {
+	WIDTH: 780px
+}
+*:first-child + HTML DIV.ibm-liquid #ibm-masthead {
+	WIDTH: 100%! important
+}
+.ibm-access {
+	LEFT: -3000px; WIDTH: 1px; POSITION: absolute
+}

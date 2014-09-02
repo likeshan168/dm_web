@@ -1,0 +1,81 @@
+#ibm-logo {
+	BACKGROUND-COLOR: black
+}
+#ibm-logo A IMG {
+	WIDTH: 44px; HEIGHT: 20px
+}
+.ibm-access {
+	DISPLAY: none
+}
+IMG {
+	OVERFLOW: hidden; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#ibm-geo-tou {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#ibm-search-form {
+	DISPLAY: none
+}
+#ibm-universal-nav {
+	MARGIN: 10px
+}
+#ibm-footer {
+	MARGIN: 10px
+}
+#ibm-universal-nav UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 10px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#ibm-footer UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 10px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#ibm-unav-home DIV {
+	DISPLAY: none! important
+}
+#ibm-unav-solutions DIV {
+	DISPLAY: none! important
+}
+#ibm-unav-services DIV {
+	DISPLAY: none! important
+}
+#ibm-unav-products DIV {
+	DISPLAY: none! important
+}
+#ibm-unav-support DIV {
+	DISPLAY: none! important
+}
+#ibm-unav-myibm DIV {
+	DISPLAY: none! important
+}
+#ibm-search {
+	DISPLAY: block
+}
+.ibm-content-subtitle#ibm-content-head H1 {
+	FONT-SIZE: 20px
+}
+#ibm-secondary-navigation H2 {
+	FONT-SIZE: 15px
+}
+.ibm-content-subtitle#ibm-content-head EM {
+	FONT-SIZE: 15px
+}
+#ibm-content-main {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 15px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+#ibm-primary-links {
+	LIST-STYLE-TYPE: circle
+}
+#ibm-navigation UL {
+	FONT-SIZE: 10px
+}
+LI {
+	WHITE-SPACE: nowrap
+}
+A {
+	WHITE-SPACE: nowrap
+}
+P {
+	COLOR: black
+}
+INPUT.ibm-btn-go {
+	BACKGROUND: url(i/v16/buttons/go.gif) no-repeat 0% 30%
+}

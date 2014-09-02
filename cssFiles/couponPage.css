@@ -1,0 +1,110 @@
+﻿/*Tab1*/
+#lib_Tab1
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 15px;
+}
+
+.lib_tabborder
+{
+    border: 1px solid #50A5CA;
+}
+.lib_Menubox
+{
+    height: 28px;
+    line-height: 28px;
+    position: relative;
+}
+.lib_Menubox ul
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    margin-left: 10px;
+    height: 25px;
+    text-align: center;
+}
+.lib_Menubox td
+{
+    /* float: left;     display: block;*/
+    cursor: pointer;
+    width: 120px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 2px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #50A5CA;
+}
+
+.lib_Menubox td.hover
+{
+    padding: 0px;
+    background: #fff;
+    width: 116px;
+    border-left: 1px solid #50A5CA;
+    border-top: 1px solid #50A5CA;
+    border-right: 1px solid #50A5CA;
+    color: #000000;
+    height: 25px;
+    line-height: 25px;
+}
+/*.hover
+{
+    padding: 0px;
+    background: #fff;
+    width: 100%;
+    border-left: 1px solid #50A5CA;
+    border-top: 1px solid #50A5CA;
+    border-right: 1px solid #50A5CA;
+    color: #000000;
+    height: 100%;
+    line-height: 25px;
+}*/
+.lib_Contentbox
+{
+    clear: both;
+    margin-top: 0px;
+    border-top: none;
+    height: 600px;
+    text-align: center;
+    padding-top: 8px;
+}
+#blockCity
+{
+    position: absolute;
+    font-size: 9pt;
+    background-color: #FFFFCC;
+    padding: 5px;
+    border: 1px solid #F5C66B;
+    line-height: 160%;
+    width: 300px;
+    display: none;
+}
+#blockCity a
+{
+    color: #000000;
+    font-size: 9pt;
+    text-decoration: none;
+}
+#blockCity a:hover
+{
+    font-size: 10pt;
+    border-bottom: dashed 1px #000000;
+}
+#blockCity table
+{
+    border: 1px dotted #F5C66B;
+    width: 300px;
+}
+
+.gvItem td, th
+{
+    text-align: center;
+    border: 1px solid grad;
+}

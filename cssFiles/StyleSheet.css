@@ -1,0 +1,63 @@
+﻿td
+{
+	font-size: 12px;
+	color: #000000;
+	line-height: 150%;
+}
+.hide
+{
+	background-color: #322922;
+	cursor: hand;
+	color: #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid #FFFFFF;
+}
+.show
+{
+	background-color: #322922;
+	cursor: hand;
+	color: #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid gray;
+	font-weight: bold;
+}
+.main_tab
+{
+	background-color: #BD8E48;
+	color: #FFFFFF;
+	border-left: 1px solid #322922;
+	border-right: 1px solid #322922;
+	border-bottom: 1px solid #322922;
+}
+.div
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -200px;
+	width: 300px;
+	height: 100px;
+	border: 1px solid Black;
+	line-height: 200px;
+	font-size: 16px;
+	text-align: center;
+	background-color:#BD8E48;
+}
+.loginTable
+{
+	background-color:#E6E6E6;
+	color: #FFFFFF;
+	border-left: 1px solid #322922;
+	border-right: 1px solid #322922;
+	border-bottom: 1px solid #322922;
+	margin:2px;
+}
+
+
+
+
+
+

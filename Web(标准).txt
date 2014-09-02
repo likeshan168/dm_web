@@ -1,0 +1,105 @@
+﻿<?xml version="1.0"?>
+<!-- 
+    注意: 除了手动编辑此文件外，您还可以使用 
+    Web 管理工具来配置应用程序的设置。可以使用 Visual Studio 中的
+    “网站”->“Asp.Net 配置”选项。
+    设置和注释的完整列表可以在
+    machine.config.comments 中找到，该文件通常位于
+      \Windows\Microsoft.Net\Framework\vx.x\Config 中 
+-->
+<configuration>
+  <appSettings>
+    <add key="loginCss" value="~/cssFiles/LoginPage.css"/>
+    <add key="MasterJs" value="~/javascriptFiles/jquery-1.4.2.min.js,~/javascriptFiles/jquery.nyroModal-1.6.2.pack.js,~/javascriptFiles/xmlHttpRequestPool.js,~/javascriptFiles/calendar.js,~/javascriptFiles/AjaxObject.js"/>
+    <add key="MainJS" value="~/javascriptFiles/createTable.js"/>
+    <!--<add key="clientDataBase" value="dm_test"/>
+    <add key="userName" value="dongfyz"/>
+    <add key="userID" value="0006"/>-->
+    <!--东方一族-->
+    <!--<add key="clientDataBase" value="DM_EISSY"/>
+    <add key="userID" value="02101"/>
+    <add key="userName" value="上云端"/>-->
+    <!--正式-->
+    <!--<add key="clientDataBase" value="dm_wst"/>
+    <add key="userName" value="文时特"/>
+    <add key="userID" value="02113"/>-->
+    <!--文时特-->
+    <add key="clientDataBase" value="DM_TEST"/>
+    <add key="userID" value="10008"/>
+    <add key="userName" value="上云端"/>
+    <!--测试-->
+    <!--<add key="userID" value="10008"/>-->
+    <!--<add key="userID" value="01043"/>-->
+    <!--短信账户名与105服务器上短息webservice使用的数据库smsManage表smsClientInfo中的账户和密码要对应，否则不能发送短信-->
+    <!--要先设置105上的-->
+    <add key="SmsUserName" value="admin"/>
+    <!--短息账户密码-->
+    <add key="SmsPwd" value="admin"/>
+    <!--发送邮件服务器-->
+    <!--<add key="SmtpServer" value="smtp.marjakurki.com.cn"/>-->
+    <add key="SmtpServer" value="smtp.ym.163.com"/>
+    <!--邮箱-->
+    <!--<add key="FromUser" value="angelaliu@marjakurki.com.cn"/>-->
+    <add key="FromUser" value="xuwei@empox.cn"/>
+    <!--邮箱密码-->
+    <!--<add key="FromPwd" value="lingshou"/>-->
+    <add key="FromPwd" value="44513457"/>
+    <!--邮箱服务的端口号（默认也是25）-->
+    <add key="Port" value="25"/>
+    <!--发送邮件的显示名称-->
+    <!--<add key="ShowName" value="PULAIMU(普莱姆)"/>-->
+    <add key="ShowName" value="文时特"/>
+    <!--发送邮件的主题-->
+    <!--<add key="Subject" value="普莱姆直复邮件"/>-->
+    <add key="Subject" value="文时特直复邮件"/>
+    <!--这里两个webservice在那台机器上发布网站使用那台机器的webservice-->
+    <!--<add key="couponWeb.couponService" value="http://www.eissy.com.cn/card/webService/couponService.asmx"/>
+    <add key="smsClient.smsService" value="http://192.168.1.88/webSmsInterface/smsService.asmx"/>-->
+    <add key="smsClient.smsService" value="http://219.232.48.105:8089/smsService.asmx"/>
+  </appSettings>
+  <connectionStrings>
+    <!--<add name="LocalConnectionString" connectionString="server=192.168.1.98;database=master;uid=sa;pwd=123"/>-->
+    <!--<add name="LocalConnectionString" connectionString="server=219.232.48.105;database=master;uid=sa;pwd=empoxweb!@90zgtyb"/>-->
+    <!--<add name="LocalConnectionString" connectionString="server=192.168.1.113;database=master;uid=sa;pwd="/>-->
+    <!--<add name="LocalConnectionString" connectionString="server=192.168.1.5;database=master;uid=sa;pwd="/>-->
+    <!--<add name="LocalConnectionString" connectionString="server=127.0.0.1;database=master;uid=sa;pwd=empoxweb!@90zgtyb;"/>-->
+    <!--注意master要小写-->
+    <add name="LocalConnectionString" connectionString="server=192.168.1.4;database=master;uid=sa;pwd=lants;"/>
+  </connectionStrings>
+  <system.web>
+    <!-- 
+             设置 compilation debug="true" 可将调试符号插入到
+            已编译的页面。由于这会
+            影响性能，因此请仅在开发过程中将此值
+            设置为 true。
+        -->
+    <sessionState mode="InProc"/>
+    <compilation debug="true" targetFramework="4.0"/>
+    <!-- 
+            设置缓存
+        -->
+    <!--<caching>
+      <sqlCacheDependency>
+        <databases>
+          <add name="dmtest" connectionStringName="LocalConnectionString"/>
+        </databases>
+      </sqlCacheDependency>
+    </caching>-->
+    <customErrors mode="RemoteOnly" defaultRedirect="ErrorPage.aspx"/>
+    <!--
+          通过 <authentication> 节可以配置
+          安全身份验证模式，ASP.NET 
+          使用该模式来识别来访用户身份。 
+        -->
+    <authentication mode="Windows"/>
+    <pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID"/>
+    <!--<httpHandlers>
+      <add verb="POST,GET" path="ajaxpro/*.ashx" type="AjaxPro.AjaxHandlerFactory,AjaxPro.2"/>
+    </httpHandlers>-->
+    <httpRuntime executionTimeout="36000"/>
+  </system.web>
+  <!-- 
+        system.webServer 节是在 Internet Information Services 7.0 下运行 ASP.NET AJAX
+        所必需的。对早期版本的 IIS 来说则不需要此节。
+    -->
+</configuration>

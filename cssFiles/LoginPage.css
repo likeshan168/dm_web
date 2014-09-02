@@ -1,0 +1,39 @@
+﻿body
+{
+    background-color: #3a6ea5;
+    background-image: url(../images/fp_bg.jpg);
+    background-repeat:repeat-y;
+    background-position: left bottom;
+}
+.login
+{
+    height: auto;
+    position: absolute;
+    top: 45%;
+    right: 10px;
+    width: 360px;
+    height: 45px;
+    background-image: url(../images/login_bg.jpg);
+}
+.iputuser
+{
+    border: 0px;
+    margin-top: 10px;
+    width: 95px;
+    height: 13px;
+    margin-left: 60px;
+}
+.inputpass
+{
+    border: 0px;
+    width: 95px;
+    height: 13px;
+    margin-left: 25px;
+}
+.subpic
+{
+    border: 0px;
+    width: 30px;
+    height: 15px;
+    margin-left: 15px;
+}

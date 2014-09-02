@@ -1,0 +1,207 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+using RBKJEmpox_Management_System.Models;
+using System.Reflection;
+using System.Text.RegularExpressions;
+using System.Collections;
+using System.Text;
+using System.Data;
+public partial class VipClientRegister : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Page.IsPostBack)
+        {
+            string vipID = string.Empty;
+            try
+            {
+                #region//已经制好卡的程序
+                
+
+                //如果是已经制好卡的话，那么就会有实体卡，
+                //这样在给客户注册vip卡号的过程中就会输入实体卡号，
+                //那么必须要去验证输入的实体卡号是否正确以及是否存在
+                
+                #endregion
+                vipID = txtCardID.Text.Trim();
+
+                string userName = txtUserName.Text.Trim();
+                string userTitle = txtUserTitle.Text.Trim();
+                string userGender = rbSex1.Checked ? "男" : "女";
+                string birthday = txtBirthday.Text.Trim();
+                string userMobile = txtMobile.Text.Trim();
+                string userEmail = txtEmail.Text.Trim();
+                string userCode = txtUserCode.Text.Trim();
+                string userPost = txtUserPost.Text.Trim();
+                string selectedPro = Request.Params["province"];
+                string selectedCity = Request.Params["city"];
+                string selectedArea = Request.Params["area"];
+                string street = txtStreet.Text.Trim();
+                string vcode = txtVerifyCode.Text.Trim();
+
+
+
+                #region//信息完整性以及正确性的验证
+                //验证必要信息是否填写完整
+                if (string.IsNullOrWhiteSpace(vipID) || string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(birthday) || string.IsNullOrWhiteSpace(userMobile) || string.IsNullOrWhiteSpace(userEmail) || string.IsNullOrWhiteSpace(vcode))
+                {
+                    ClientScript.RegisterClientScriptBlock(GetType(), "tip1", "alert('请将必要信息填写完整！')", true);
+                    return;
+                }
+                else//验证完不为空之后，还要验证是否符合规则
+                {
+                    Regex regex = new Regex(RegularExp.VIPCARDID_REGULAR_EXP);
+                    #region//自己输入卡号的程序
+                    if (!regex.IsMatch(vipID))
+                    {
+                        ClientScript.RegisterClientScriptBlock(GetType(), "vipCardIDMsg", "alert('输入的卡号不符合要求，请输入1到20位之间的数字！')", true);
+                        return;
+                    }
+                    else//验证卡号是否存在重复的
+                    {
+                        if (new VipClientOperate().ValidateVipCardIDRegistered(vipID) > 0)//说明数据库中已经有这个卡号
+                        {
+                            ClientScript.RegisterClientScriptBlock(GetType(), "vipCardIDMsg", "alert('输入的卡号已经被注册了，请重新输入卡号！')", true);
+                            return;
+                        }
+                    }
+                    #endregion
+                    regex = new Regex(RegularExp.NAME_REGULAR_EXP);
+
+                    if (!regex.IsMatch(userName))//验证姓名是否符合要求
+                    {
+                        ClientScript.RegisterClientScriptBlock(GetType(), "userNameMsg", "alert('输入的姓名不符合要求，请输入汉字或者字母组成的姓名！')", true);
+                        return;
+                    }
+                    regex = new Regex(RegularExp.BRITHDAY_REGULAR_EXP);
+                    if (!regex.IsMatch(birthday))//验证输入的饿生日是否符合规范
+                    {
+                        ClientScript.RegisterClientScriptBlock(GetType(), "birthdayMsg", "alert('输入的生日格式不符合要求，请按要求重新输入！')", true);
+                        return;
+                    }
+                    regex = new Regex(RegularExp.MOBILE_REGULAR_EXP);
+                    if (!regex.IsMatch(userMobile))//验证手机号码是否符合规范
+                    {
+                        ClientScript.RegisterClientScriptBlock(GetType(), "userMobileMsg", "alert('输入的手机号码不符合要求，请按重新输入正确的手机号码！')", true);
+                        return;
+                    }
+                    regex = new Regex(RegularExp.MAIL_REGULAR_EXP);
+                    if (!regex.IsMatch(userEmail))//验证输入的邮箱是否符合规范
+                    {
+                        ClientScript.RegisterClientScriptBlock(GetType(), "userEmailMsg", "alert('输入的邮箱不符合要求，请按核对后重新输入！')", true);
+                        return;
+                    }
+
+                }
+                if (Session["code"] != null)//这里是验证验证码是否正确
+                {
+                    if (string.Compare(vcode, Session["code"].ToString(), true) != 0)
+                    {
+                        ClientScript.RegisterClientScriptBlock(GetType(), "tip2", "alert('输入的验证码不正确！')", true);
+                        return;
+                    }
+                }
+                #endregion
+                //在所有信息都填写完整而且正确的情况下就将vip信息保存到数据库中去
+                #region//下面是讲客户填写的资料保存到数据库中
+                VipClientInfo vipClientInfo = new VipClientInfo()
+                {
+                    VipID = vipID,
+                    VipName = userName,
+                    VipTitle = userTitle,
+                    VipGender = userGender,
+                    VipBirthday = birthday,
+                    VipMobile = userMobile,
+                    VipEmail = userEmail,
+                    VipCode = userCode,
+                    VipPost = userPost,
+                    VipAddress = selectedPro + selectedCity + selectedArea + street,
+                    VipPwd = "888888",
+                    BeginDate = DateTime.Now.ToString("yyyy-MM-dd"),
+                    EndDate = DateTime.Now.AddYears(1).ToString("yyyy-MM-dd"),
+                    VipCardType = "1",//注册默认状态是1（卡类型）
+                    VipCardDiscount = 89
+                };
+                ArrayList ar = new ArrayList();
+                ar.Add(SqlStrHelper.RVipClientInfoSqlStr(vipClientInfo));//将vip信息插入到数据库中去
+                int pri = (int)new SQL_Operate().sqlExecuteScalar(SqlStrHelper.GPRISqlStr());
+                ar.Add(SqlStrHelper.ASendDataSqlStr(userMobile, userName, vipID, pri));//将短信信息插入到数据库中准备发送给客户，是用来通知客户vip卡号已经注册成功！
+                new SQL_Operate().sqlExcuteNonQuery(ar, true);
+
+                #region 将新增的vip资料必须要同步到erp软件当中去
+                DateTime newDT = new DateTime(2010, 1, 1);
+                TimeSpan sp = DateTime.Now - newDT;
+                double li = sp.TotalMilliseconds;
+                byte[] dataRes = Encoding.Default.GetBytes(vipID);
+                string sql = "insert into TempStor(SessionId,data,flag,companyid,databag) values('"
+                    + li.ToString() + "','0x35',0,'" + memberStatic.companyID + "',@b)";
+                DataTable dt = new DataTable();
+                dt.Columns.Add("data", typeof(string));
+                dt.Columns.Add("value", typeof(object));
+                dt.Columns.Add("type", typeof(string));
+                dt.Rows.Add(new object[] { "@b", dataRes, "binary" });
+
+                new SQL_Operate().sqlExcuteNonQuery(sql, dt);
+                #endregion
+                Session["VipName"] = userName;
+               
+                Cache["vipCardID"] = vipID;
+                ClientScript.RegisterClientScriptBlock(GetType(), "regsucc", "location.href='LoginSuccess.aspx'", true);
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                ArrayList ar = new ArrayList();
+                ar.Add(SqlStrHelper.DVipClientInfoSqlStr(vipID));//注册失败的话，就将插入的数据删除掉
+                ar.Add(SqlStrHelper.UVipCardNoTbSqlStr2(vipID));
+                new SQL_Operate().sqlExcuteNonQuery(ar, true);
+                Log4netHelper.InvokeErrorLog(MethodBase.GetCurrentMethod().DeclaringType, "vip卡号注册出错！", ex);
+                ClientScript.RegisterClientScriptBlock(GetType(), "tip4", "alert('" + ex.Message + "')", true);
+            }
+
+        }
+        else//这个情况就是说只有vip管理员才能为顾客开vip卡
+        {
+            if (Session["LoginState"] == null || Session["LoginState"].ToString() != "login")
+            {
+                ClientScript.RegisterStartupScript(GetType(), "redirect", "location.href='Login.aspx'", true);
+            }
+        }
+        #region//这个是已经制好卡的程序
+        //else//在页面初始化过程中，就先要获取有没有可用的vip卡号,如果有就将其保存到session中，以便后面进行使用
+        //{
+        //    try
+        //    {
+        //        new VipClientOperate().ReductionCardNo();//先将那些状态已经被改变，但是没有被申请的卡号，恢复为可用的状态
+        //        string vipID = new VipClientOperate().GetAvaliableCardID();
+        //        if (string.IsNullOrEmpty(vipID))
+        //        {
+        //            ClientScript.RegisterClientScriptBlock(GetType(), "tip5", "alert('很抱歉，暂无vip卡号可用，不可申请！')", true);
+        //        }
+        //        else//说明有可用的卡号
+        //        {
+        //            if (new SQL_Operate().sqlExcuteNonQueryInt(SqlStrHelper.UVipCardNoTbSqlStr1(vipID)) < 0)//获取可用卡号之后，就立即更新卡号的状态为不可用，这样就能保证这个卡号会唯一地被注册
+        //            {
+        //                ClientScript.RegisterClientScriptBlock(GetType(), "noCardMsg", "alert('很抱歉，服务器忙，请稍后再试！')", true);
+        //                return;
+        //            }
+        //            Session["AvailiabeVipCard"] = vipID;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Log4netHelper.InvokeErrorLog(MethodBase.GetCurrentMethod().DeclaringType, "获取vip卡号错误", ex);//记录错误日志
+        //        ClientScript.RegisterClientScriptBlock(GetType(), "tip7", "alert('很抱歉，服务器繁忙，请稍后再试！')", true);
+        //    }
+        //}
+        #endregion
+
+        //首先就应该要判断数据库中是否有可用的vip卡号，这样才能进行vip卡号的注册
+
+    }
+}

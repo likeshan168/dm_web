@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        .body
+        {
+            background-color: lightgreen;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var url = document.URL;
+            var paraStr = url.substring(url.indexOf('?') + 1, url.length);
+            var ahref=url.substring(0,url.lastIndexOf('/')+1)+'invsAnswer.aspx?'+paraStr;
+            document.getElementById('invsModel').setAttribute('href',ahref);
+        }
+    </script>
+</head>
+<body class="body">
+    <div style="margin: 0 auto; width: 375px; height: 281px; margin-top: 50px; background-image: url('img/emailbg7.jpg')">
+        <div style="margin-top: 75px; margin-left: 100px; position: absolute;">
+            <h3 style="color: Red">
+                尊敬的用户您好：</h3>
+            <p style="font-size: 12px;">
+                感谢您一直以来对我们的关心<br />
+                和支持，请点击下面的链接<br />
+                参与我们的有奖问卷调查活动<br />
+                ，更多积分和 好礼等着您！<br />
+            </p>
+            <p style="font-size: 12px; color: Blue; text-align: center;">
+                <a id="invsModel">进入调研问卷 </a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
