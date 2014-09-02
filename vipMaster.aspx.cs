@@ -1621,7 +1621,7 @@ public partial class vipMaster : System.Web.UI.Page
 
                             //尊敬的顾客[姓名],您获得一张Eissy优惠卷，优惠券编号：[优惠券编号]，面值[优惠券面值]，请于[截至日期]前到店使用 
 
-                            sql = "insert into sendData values('" + mobile + "','直复','尊敬的会员您好！恭喜您获得一张Eissy优惠券[" + dt.Rows[0][0].ToString() + "]" + ",请于" + Convert.ToDateTime(dt.Rows[0][1].ToString()).ToString("yyyy-MM-dd") + "前到店使用." + "','" + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + "',0," + pri + ")";
+                            sql = "insert into sendData values('" + mobile + "','直复','尊敬的会员您好！您获得一张Eissy优惠券[" + dt.Rows[0][0].ToString() + "]" + ",面值["+money+"]请于" + Convert.ToDateTime(dt.Rows[0][1].ToString()).ToString("yyyy-MM-dd") + "前到店使用." + "','" + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + "',0," + pri + ")";
                             so.sqlExcuteNonQuery(sql, false);
                         }
                     }
